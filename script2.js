@@ -32,9 +32,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 select.appendChild(newl);
                 collection.push(array[al].title);
               }
-          }
+            }
         });
-
       }
     }
   };
