@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function(){
       for (var album in array){
         list.push(array[album]["cover_art"]);
       }
-      for (var i = 0; i < 10; i++) {
+      for (var i = 0; i < 12; i++) {
         var element = list[Math.floor(Math.random()*list.length)];
         if ((check.indexOf(element) == -1) && (check.length < 3)){
-        check.push(element);
-        var img = document.createElement("img");
-        img.src = "images/" + element;
-        images.appendChild(img);
+          check.push(element);
+          var img = document.createElement("img");
+          img.src = "images/" + element;
+          images.appendChild(img);
         }
       }
     }

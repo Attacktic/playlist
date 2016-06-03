@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
           var img = document.createElement("img");
           img.src = "images/" + list[el];
           if (list[el] === array[album]["cover_art"]){
-            img.setAttribute("id", array[album]["id"]);
+            img.setAttribute("id", array[album].id);
           }
         }
         scroll.appendChild(img);
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(){
         images[i].addEventListener("click", function(event){
             var target = event.target;
             for (var al in array){
-              if ((array[al]["id"] == target.id) && (collection.indexOf(array[al].title) == -1)){
+              if ((array[al].id == target.id) && (collection.indexOf(array[al].title) == -1)){
                 var newl = document.createElement("h5");
                 newl.innerHTML = array[al].artist + ": " + array[al].title;
                 select.appendChild(newl);
