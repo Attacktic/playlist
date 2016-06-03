@@ -28,7 +28,8 @@ main {
   background-color: #EEEEEE;
 }
 footer {
-  position: relative;
+  position: absolute;
+  bottom: 0px;
   height: 6vh;
   width: 100%;
   background-color: #686859;
@@ -44,11 +45,11 @@ footer {
 }
 .title {
   top: 35%;
-  left: 35%;
+  left: 36%;
   position: absolute;
   height: 40px;
   width:400px;
-  font-size: 4em;
+  font-size: 3.8em;
   color: #4A0064;
   font-family: "Avenir";
 }
@@ -74,13 +75,12 @@ footer {
   display: inline-block;
   height: 100%;
   width: 36%;
-  background-image: "track.fw.png";
 }
 .left{
   position: relative;
   display: inline-block;
   height: 100%;
-  width: 63.5%;
+  min-width: 63.5%;
   background-color: #EEEEEE;
 }
 #background {
@@ -124,14 +124,22 @@ footer {
 
 #list{
   margin: auto;
-  width: 90%;
-  height: 30vh;
+  width: 89%;
+  height: 27vh;
   overflow: scroll;
   background-color: #EEEEEE;
   border: 1px solid #353526;
   color: #353526;
   margin-bottom: 5vh;
+  padding-left: 1vw;
 }
+
+#list h5 {
+  margin-bottom: -3vh;
+  font-family: "Avenir";
+  font-size: 1.2em;
+}
+
 #clear{
   margin-left:5%;
 }
