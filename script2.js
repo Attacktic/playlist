@@ -7,10 +7,13 @@ document.addEventListener("DOMContentLoaded", function(){
       var list = [];
       for (var album in array){
         list.push(array[album]["cover_art"]);
-      }
-      for (var el in list){
-        var img = document.createElement("img");
-        img.src = "images/" + list[el];
+        for (var el in list){
+          var img = document.createElement("img");
+          img.src = "images/" + list[el];
+          if (list[el] === array[album]["cover_art"]){
+            img.setAttribute("id", array[album]["id"]);
+          }
+        }
         scroll.appendChild(img);
       }
     }

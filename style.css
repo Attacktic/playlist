@@ -110,8 +110,9 @@ footer {
   margin: auto;
   overflow: scroll;
   width: 90%;
-  height: 18vh;
+  height: 15vh;
   text-align: center;
+  white-space:nowrap;
 }
 
 #scroll img{
