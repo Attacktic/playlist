@@ -18,8 +18,8 @@ function getAlbums(opt, callback) {
   request.send();
 }
 
-function albumExistsAlready(list, imageUrl) {
-  return list.indexOf(imageUrl) == -1
+function albumExistsAlready(array, el) {
+  return array.indexOf(el) == -1;
 }
 
 function start(){
@@ -37,31 +37,34 @@ function start(){
       list.push({
         url: imageUrl,
         id: albums[album].album.id
-      })
+      });
       for (var i in list){
         var img = document.createElement("img");
         img.src = list[i].url;
         img.id = list[i].id;
       }
-      scroll.appendChild(img);
-      scroll.style.width = list.length*100 + "px";
+
+      if (albumExistsAlready(check, img.id)){
+      check.push(img.id);
+      scroll.appendChild(img);}
+      scroll.style.width = check.length*100 + "px";
     }
-  });
 
     var images = document.getElementsByTagName("img");
     for (var i = 0; i < images.length; i++) {
       images[i].addEventListener("click", function(event){
           var target = event.target;
-          for (var al in array){
-            if ((array[al].album.id == target.id) && (collection.indexOf(array[al].album.name) == -1)){
+          for (var al in albums){
+            if ((albums[al].album.id == target.id) && albumExistsAlready(collection, albums[al].album.name)){
               var newl = document.createElement("h5");
-              newl.innerHTML = array[al].artists[0].name+": "+ array[al].album.name;
+              newl.innerHTML = albums[al].artists[0].name+": "+ albums[al].album.name;
               select.appendChild(newl);
-              collection.push(array[al].album.name);
+              collection.push(albums[al].album.name);
             }
           }
       });
     }
+  });
 }
 
 start();
