@@ -5,12 +5,16 @@ var submit = document.getElementById("submit");
 var collection = [];
 var search = document.getElementById("search");
 var input = document.getElementById("input");
+var opt;
 
-search.addEventListener("click", function(){
+search.addEventListener("click", function start(){
   scroll.innerHTML = "";
   var list = [];
   var check = [];
-  var opt = input.value;
+  opt = input.value;
+  if(opt === ""){
+    opt = randomword;
+  }
   var request = new XMLHttpRequest();
   request.onreadystatechange = function(){
     if (request.readyState === 4 && request.status < 400){

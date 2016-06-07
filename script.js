@@ -1,5 +1,6 @@
 var images = document.getElementById("images");
 
+window.addEventListener("load", function(){
   var request = new XMLHttpRequest();
   request.onreadystatechange = function(){
     if (request.readyState === 4 && request.status < 400){
@@ -22,3 +23,4 @@ var images = document.getElementById("images");
   };
   request.open("GET", 'https://api.spotify.com/v1/search?q='+ randomword +'&type=track');
   request.send();
+})
