@@ -110,21 +110,23 @@ footer {
   font-family: "Avenir";
   font-size: 2em;
 }
-
-#scroll{
+#outs{
   margin: auto;
-  overflow: scroll;
-  width: 90%;
-  height: 15vh;
-  text-align: center;
+  height: 150px;
+  width: 1240px;
+  overflow-x:scroll;
+  overflow-y:hidden;
   margin-bottom: 4vh;
+}
+#scroll{
+  height: 100px;
 }
 
 #scroll img{
   width: 70px;
   height: 70px;
   margin-top: 2%;
-  margin-right: 2vw;
+  margin-right: 30px;
 }
 
 #list{
@@ -151,4 +153,28 @@ footer {
 
 #submit{
   margin-left: 1%;
+}
+
+#search{
+  font-size: 1.5em;
+  font-family: "Avenir";
+  margin-top: 4vh;
+  margin-left: 1vw;
+  float: left;
+  background-color: #353526;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  width: 100px;
+  height: 35px;
+}
+
+#input{
+  color: #353526;
+  font-size: 1.3em;
+  margin-left: 3vw;
+  margin-top: 4vh;
+  float: left;
+  width: 140px;
+  height: 30px;
 }
